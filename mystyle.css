@@ -16,24 +16,25 @@
 body {
     background-image: url("header2.png");
     background-position: center top;
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
     font-family: 'Roboto' , Verdana, 'Geneva' , Tahoma, sans-serif;
     padding: 12% 0 0 0;
-    margin: 0 0 0 0;
+    margin: 0;
 
     
 
 
 }
 div { 
-    margin: 0;
+    margin: 0 3% 0 0;
 }
 
 .flex-container {
 
     display: flex;
     flex-direction: column;  
+    margin: auto;
 }
  
 .flex-col-1 { 
@@ -47,7 +48,7 @@ div {
 }
 
 .flex-col-1 div {
-   height: auto;
+   height: fit-content;
    flex: 1;
    padding-left: 2%;
 }
@@ -55,7 +56,10 @@ div {
 .flex-col-1 .a-sub-2 {
     flex: 2.3 1 0%;
     padding-top: 2%;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .flex-col-2 { 
     display: flex;
@@ -71,7 +75,9 @@ div {
     flex: 2.3 1 0%;
 }
 
-
+h2 {
+    font-size: 110%;
+}
 
  br {
     line-height: 20%;
@@ -80,11 +86,13 @@ div {
  .flex-col-1 .a-sub-2-h2-special {
      color: black;
      padding-left: 2%;
+     font-size: 100%;
  }
 
  .flex-col-1 .a-sub-2-h3-special {
     color: black;
     padding-left: 2%;
+    font-size: 90%;
 }
 
 .flex-container .name-role-container{
@@ -128,12 +136,56 @@ div {
     padding-top: 5%;
 }
 
+.list-style {
+    padding-bottom: 5%;
+}
 
+.a-sub-2-work-container {
+    flex: 1;
+}
+
+.a-sub-2-tools-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tools-container-1 ,.tools-container-2, .tools-container-3, .tools-container-4  { 
+    flex: 1;    
+    align-content: center;
+    border: solid 1px #FFFFFF;
+    border-radius: 10px 10px 20px 20px; 
+    padding: 2%;
+}
+
+.tools-container-1 {   
+    background-color: #b2311c;
+    margin: 2% 10% 2% 0%;
+}
+
+.tools-container-2 { 
+    background-color: #b2311c;
+    margin: 2% 0% 2% 10%;
+}
+
+.tools-container-3 { 
+    background-color: #b2311c;
+    margin: 2% 10% 2% 0%;
+}
+
+.tools-container-4 { 
+    background-color: #b2311c;
+    margin: 2% 0% 2% 10%;  
+}
+
+.tools-container-content {
+    height: fit-content;
+}
 @media only screen and (max-width: 768px) {
 
     .flex-col-1 { 
         gap: 0%;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     
     .flex-col-1 div {
@@ -151,10 +203,6 @@ div {
     .flex-col-2 .b-sub-2 {
         flex: 1 1 0%;
     }
-    
-     br {
-        line-height: 20%;
-     }
     
     .flex-container .name-role-container{
         flex-direction: column;
